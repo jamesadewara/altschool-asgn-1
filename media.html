@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Media Showcase - About Me</title>
+</head>
+<body>
+
+  <header>
+    <center>
+        
+        <h1 >About Me - Through Media</h1>
+        <p >A creative showcase using HTML media elements</p>
+    </center>
+    <hr/>
+  </header>
+
+  <section >
+      <center>
+          <h2>👤 Who I Am</h2>
+
+          <picture>
+            <!-- For laptops -->
+            <source srcset="assets/img/profile.jpg" media="(min-width: 1024px)">
+            <!-- For tablets -->
+            <source srcset="assets/img/profile.jpg" media="(min-width: 600px)">
+            <!-- For mobile -->
+            <source srcset="assets/img/profile.jpg" media="(max-width: 599px)">
+            <!-- Fallback image -->
+            <img src="assets/img/profile.jpg" alt="My Profile Picture" style="width: 100%; max-width: 300px; border-radius: 50%;">
+          </picture>
+        </center>
+        
+
+    <p>
+      I am a full-stack developer passionate about building scalable, secure, and beautiful apps across web, mobile, and cloud. Here's a media-rich introduction to my journey and personality.
+    </p>
+  </section>
+
+  <section >
+    <h2>A Video That Inspires Me</h2>
+    <iframe width="100%" height="315" src="https://www.youtube.com/embed/2KmEglIYZRU" 
+            title="YouTube video player" frameborder="0" allowfullscreen>
+    </iframe>
+    <p>This video speaks to my mindset and motivation for success in tech.</p>
+  </section>
+
+  <section >
+    <h2>A Soundtrack That Drives My Focus</h2>
+    <iframe style="border-radius:12px" 
+            src="https://open.spotify.com/embed/track/4dwPr4moTpcCb7hER3nBep?utm_source=generator" 
+            width="100%" height="152" frameborder="0" allowtransparency="true" 
+            allow="encrypted-media">
+    </iframe>
+    <p>This song keeps me grounded while I code, think, and innovate.</p>
+  </section>
+
+  <footer>
+    <center>
+        <hr/>
+        <p>Built with pure HTML media elements no CSS • &copy; 2025 James Ayomide Adewara</p>
+<hr/>
+    </center>
+  </footer>
+
+</body>
+</html>
