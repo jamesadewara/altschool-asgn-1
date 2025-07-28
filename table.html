@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>All Schools and Courses at AltSchool Africa</title>
+  </head>
+  <body>
+    <section>
+      <center>
+        <h1>AltSchool Africa - Courses and Schools</h1>
+      </center>
+    </section>
+
+    <main>
+      <center>
+        <div>
+          <table border="1" cellspacing="0" cellpadding="10">
+            <thead>
+              <tr>
+                <th>S/N</th>
+                <th>School</th>
+                <th>Courses</th>
+              </tr>
+            </thead>
+            <tbody id="table-body">
+              <!-- Used Javascript to display a dynamic data for the rows -->
+            </tbody>
+          </table>
+        </div>
+      </center>
+    </main>
+
+    <script>
+      const data = [
+        { id: 1, school: "School of Engineering", course: "Cloud Engineering" },
+        {
+          id: 2,
+          school: "School of Engineering",
+          course: "Frontend Engineering",
+        },
+        {
+          id: 3,
+          school: "School of Engineering",
+          course: "Backend Engineering",
+        },
+        { id: 4, school: "School of Product", course: "Product Management" },
+        {
+          id: 5,
+          school: "School of Product",
+          course: "Product Design (UI/UX)",
+        },
+        { id: 6, school: "School of Data", course: "Data Science" },
+        { id: 7, school: "School of Data", course: "Data Analysis" },
+        { id: 8, school: "School of Data", course: "Business Intelligence" },
+      ];
+
+      const tableBody = document.getElementById("table-body");
+
+      data.forEach((item) => {
+        const row = document.createElement("tr");
+
+        const idCell = document.createElement("td");
+        idCell.textContent = item.id;
+
+        const schoolCell = document.createElement("td");
+        schoolCell.textContent = item.school;
+
+        const courseCell = document.createElement("td");
+        courseCell.textContent = item.course;
+
+        row.appendChild(idCell);
+        row.appendChild(schoolCell);
+        row.appendChild(courseCell);
+
+        tableBody.appendChild(row);
+      });
+    </script>
+  </body>
+</html>
