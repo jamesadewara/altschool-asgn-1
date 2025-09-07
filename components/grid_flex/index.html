@@ -1,47 +1,50 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Flex Grid</title>
-    <link rel="stylesheet" href="styles.css" />
-  </head>
-  <body>
-    <!-- SECTION -->
-    <section id="section">
-      <div class="container">
-        <div class="flex-grid">
-          <div class="card">
-            <div class="flex-div jcs-s ai-c">
-              <div class="profile-pic">
-                <img src="../../assets/img/profile.jpg" alt="Profile Picture" />
-              </div>
-              <div class="card-content">
-                <h3>James Adewara</h3>
-                <p>
-                  I am a fullstack mobile/web developer. I focus on building
-                  scalable, efficient, robust and secured solutions that scales
-                  based on business demands
-                </p>
-              </div>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flex Grid: CSS Assignment</title>
+    <link rel="stylesheet" href="styles.css"/>
+    <link rel="favicon" href="../../assets/img/profile.jpg" />
+</head>
+<body>
+    <div class="container">
+        <div class="grid-container">
+            <!-- Profile Section -->
+            <div class="profile-section">
+                <div class="profile-pic">
+                    <img src="../../assets/img/profile.jpg" alt="Profile Picture">
+                </div>
+                <div class="intro-content">
+                    <h2 class="user-select-none">Talk about yourself</h2>
+                    <h3>James Adewara</h3>
+                    <p>I am a fullstack mobile/web developer with a passion for creating efficient and scalable solutions. I focus on building robust and secure applications that can grow with business demands. With several years of experience in the industry, I enjoy solving complex problems and learning new technologies.</p>
+                </div>
             </div>
-          </div>
-          <div class="card">
-            <div class="card-content flex-center">
-              <span class="list-highlighter"
-                >Programming <br />& <br />Competitions</span
-              >
+            
+            <!-- Hobbies and Aspiration Section -->
+            <div class="info-section">
+                <div class="card hobbies-card">
+                    <h3 class="user-select-none">Hobbies</h3>
+                    <div class="hobby-item">
+                        <h4>Programming & Competitions</h4>
+                        <p>For a long time, I avoided competitions because of fear and my struggles with social connections. Recently, I’ve started stepping out of that comfort zone, joining challenges as a way to connect with others and grow my confidence. It’s a work in progress, but I’m excited to see where it leads.</p>
+                    </div>
+                    <div class="hobby-item">
+                        <h4>Reading & Learning</h4>
+                        <p>I have a habit of reading technology books and articles that spark my curiosity. This helped me stay updated with software development trends and advancements, although lately I’ve been feeling a bit drained. Still, I believe consistent learning will keep opening doors to the fields I truly want to master.</p>
+                    </div>
+                </div>
+                
+                <div class="card aspiration-card">
+                    <h3 class="user-select-none">Aspiration in Life</h3>
+                    <div class="aspiration-item">
+                        <h4>Solution-Oriented Leader & Technologist</h4>
+                        <p>I aspire to grow into a technology leader who guides teams in building innovative solutions that make a real impact on people’s lives. My journey started with full-stack development, initially as a way to fund my passion for robotics. Along the way, I explored areas like 3D design, robotics, embedded systems(not really much that reading an article), and AI/Deep RL. While I sometimes get tired of front-end basics like HTML and CSS, my bigger vision remains, to dive deeper into robotics and eventually cloud engineering.</p>
+                    </div>
+                </div>
             </div>
-          </div>
-          <div class="card">
-            <div class="card-content flex-center">
-              <span class="list-highlighter"
-                >Solution Oriented Leader <br />& <br />Technologist</span
-              >
-            </div>
-          </div>
         </div>
-      </div>
-    </section>
-  </body>
+    </div>
+</body>
 </html>

@@ -1,145 +1,148 @@
-:root{
-    --primary: rgb(140, 140, 209);
-    --outline: rgb(41, 40, 40);
-    --surface: white;
+:root {
+  --primary: rgb(140, 140, 209);
+  --outline: rgb(41, 40, 40);
+  --surface: white;
+  --card-bg: #f8f8f8;
+  --hobby-bg: #e8f4f8;
+  --aspiration-bg: #f8e8e8;
 }
 
-html, body{
-    padding: 0px;
-    margin: 0px;
-    user-select: none;
-    overflow: hidden;
-    background-color: var(--surface);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    min-height: 100vh;
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
-/** WOULD HAVE LOVED TO USE SCSS **/
-
-#section{
-    width: 100vw;
-    height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+body {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  background-color: var(--surface);
+  padding: 20px;
+  line-height: 1.6;
+  color: #333;
 }
 
-.container{
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: center;
+.container {
+  max-width: 1000px;
+  margin: 0 auto;
 }
 
-.flex-grid{
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: auto auto;
-    gap: 10px;
-    justify-content: center;
+.grid-container {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 25px;
 }
 
-.flex-grid > .card:nth-child(1){
-    grid-column: span 2;
-    grid-row: 1;
-    justify-self: center;
-    align-self: center;
-    width: 380px;
-    height: 180px;
+/* Profile Section */
+.profile-section {
+  display: grid;
+  grid-template-columns: 150px 1fr;
+  gap: 30px;
+  background-color: var(--card-bg);
+  padding: 30px;
+  padding-top: 42px;
+  padding-bottom: 120px;
+  border-radius: 15px;
+  border: 1px solid var(--outline);
+  align-items: center;
 }
 
-.flex-grid > .card:nth-child(2){
-    width: 160px;
-    height: 80px;
+.profile-pic {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  background-color: var(--primary);
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 3px solid var(--outline);
 }
 
-.flex-grid > .card:nth-child(3){
-    width: 160px;
-    height: 80px;
+.profile-pic img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 
-
-.card{
-    border: 1px solid var(--outline);
-    max-width: 380px;
-    max-height: 380px;
-    padding: 24px;
-    border-radius: 8px;
+.intro-content h2 {
+  margin-bottom: 15px;
+  color: #444;
+  border-bottom: 2px solid var(--primary);
+  padding-bottom: 8px;
 }
 
-.card > .card-content{
-    padding: 12px;
-    text-align: justify;
-    display: flex;
-    flex-direction: column;
-    align-items: start;
+/* Hobbies and Aspiration Section */
+.info-section {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 25px;
 }
 
-.flex-div{
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: center;
-    gap: 16px;
+.card {
+  background-color: var(--card-bg);
+  padding: 25px;
+  border-radius: 15px;
+  border: 1px solid var(--outline);
+  height: 100%;
 }
 
-/** JUSTIFY CONTENTS**/
-.jcs-s{
-    justify-content: start;
+.hobbies-card {
+  background-color: var(--hobby-bg);
 }
 
-.jcs-b{
-    justify-content: space-between;
+.aspiration-card {
+  background-color: var(--aspiration-bg);
 }
 
-.jc-c{
-    justify-content: center;
+.card h3 {
+  margin-bottom: 15px;
+  color: #444;
+  border-bottom: 2px solid var(--primary);
+  padding-bottom: 8px;
 }
 
-.jcs-e{
-    justify-content: space-evenly;
+.hobby-item,
+.aspiration-item {
+  margin-bottom: 15px;
 }
 
-.ai-c{
-    align-items: center;
+.hobby-item h4,
+.aspiration-item h4 {
+  color: #555;
+  margin-bottom: 5px;
 }
 
-.profile-pic{
+/* Responsive Design */
+@media (max-width: 768px) {
+  .profile-section {
+    grid-template-columns: 1fr;
+    justify-items: center;
+    text-align: center;
+  }
+
+  .info-section {
+    grid-template-columns: 1fr;
+  }
+
+  .profile-pic {
     width: 120px;
     height: 120px;
-    border-radius: 50%;
-    background-color: var(--primary);
-    flex-shrink: 0;
+  }
 }
 
-.profile-pic > img{
-    border-radius: 50%;
-    background-size: contain;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
+@media (max-width: 480px) {
+  .profile-section,
+  .card {
+    padding: 20px;
+  }
+
+  .profile-pic {
+    width: 100px;
+    height: 100px;
+  }
 }
 
-.ul{
-    list-style-type: none;
-    padding: 0px;
-    margin: 0px;
-}
-
-.list-highlighter{
-    background-color: #57575731;
-    padding: 4px;
-    border-radius: 4px;
-    align-self: center;
-    text-align: center;
-    justify-self: center;
-}
-
-.flex-center {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100%;
+/** Unesseceary but still adding **/
+.user-select-none{
+  user-select: none;
 }
