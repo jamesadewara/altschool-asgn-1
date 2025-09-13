@@ -18,10 +18,10 @@ body {
   font-family: "Poppins", sans-serif;
   color: var(--outline);
   background: linear-gradient(30deg, var(--background), var(--surface));
-  min-height: 100vh
+  min-height: 100vh;
 }
 
-main{
+main {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -78,11 +78,13 @@ h1 {
   font-size: 16px;
   font-weight: 600;
   width: 100%;
-  transition: background-color 0.3s;
+  transition: ease-in-out 0.3s;
 }
 
 .btn:hover {
+  transition: ease-in-out 0.3s;
   background-color: var(--dark-primary);
+  border-radius: 16px;
 }
 
 #userDetails {

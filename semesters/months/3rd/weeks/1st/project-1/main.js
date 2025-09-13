@@ -39,7 +39,7 @@ class Validator {
   }
 }
 
-// User class
+// User
 class UserManager {
   constructor() {
     this.validator = new Validator();
@@ -86,7 +86,7 @@ document.addEventListener("DOMContentLoaded", function () {
   const userManager = new UserManager();
 
   // Add event listener to the login button
-  document.getElementById("loginBtn").addEventListener("click", function () {
+  document.getElementById("login-btn").addEventListener("click", function () {
     userManager.login();
   });
 
