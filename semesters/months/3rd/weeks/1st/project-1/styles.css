@@ -1,0 +1,109 @@
+:root {
+  --primary: #063172;
+  --dark-primary: #051e4a;
+  --outline: #1f1f1f;
+  --background: #b2b2b2;
+  --surface: #ffffff;
+  --border: 1px solid #1a1a1a;
+  --border-radius: 8px;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  color: var(--outline);
+  background: linear-gradient(30deg, var(--background), var(--surface));
+  min-height: 100vh
+}
+
+main{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+}
+
+.container {
+  background-color: var(--surface);
+  border-radius: 12px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 500px;
+  padding: 30px;
+}
+
+header {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+h1 {
+  color: var(--primary);
+  margin-bottom: 10px;
+}
+
+.instructions {
+  background-color: var(--background);
+  padding: 15px;
+  margin: 20px 0;
+  border-radius: 4px;
+}
+
+.instructions h3 {
+  color: var(--primary);
+  margin-bottom: 10px;
+}
+
+.instructions ul {
+  padding-left: 20px;
+}
+
+.instructions li {
+  margin-bottom: 8px;
+}
+
+.btn {
+  background-color: var(--primary);
+  color: var(--surface);
+  border: none;
+  padding: 12px 20px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: 600;
+  width: 100%;
+  transition: background-color 0.3s;
+}
+
+.btn:hover {
+  background-color: var(--dark-primary);
+}
+
+#userDetails {
+  margin-top: 30px;
+  padding: 20px;
+  background-color: var(--background);
+  border-radius: 8px;
+  display: none;
+}
+
+.user-detail {
+  margin-bottom: 10px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid var(--background);
+}
+
+.user-detail:last-child {
+  border-bottom: none;
+}
+
+.detail-label {
+  font-weight: 600;
+  color: var(--primary);
+}

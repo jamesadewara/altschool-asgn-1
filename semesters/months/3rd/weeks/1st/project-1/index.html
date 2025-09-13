@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>User Login Validation</title>
+    <!-- Google Poppins-->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap"
+      rel="stylesheet"
+    />
+    <link href="styles.css" rel="stylesheet" />
+  </head>
+  <body>
+    <main>
+      <div class="container">
+        <header>
+          <h1>User Login Validation</h1>
+          <p>Please click the button below to login</p>
+        </header>
+
+        <div class="instructions">
+          <h3>Validation Rules:</h3>
+          <ul>
+            <li>Username must be less than 10 characters</li>
+            <li>Password must be greater than 6 characters</li>
+            <li>You must confirm your password</li>
+            <li>Credentials must match the stored user details</li>
+          </ul>
+        </div>
+
+        <button id="loginBtn" class="btn">Login with Prompts</button>
+
+        <div id="user-details">
+          <br />
+          <br />
+          <h2>User Details</h2>
+          <div class="user-detail">
+            <span class="detail-label">Name:</span> <span id="user-name"></span>
+          </div>
+          <div class="user-detail">
+            <span class="detail-label">Username:</span>
+            <span id="user-username"></span>
+          </div>
+          <div class="user-detail">
+            <span class="detail-label">Course:</span>
+            <span id="user-course"></span>
+          </div>
+          <div class="user-detail">
+            <span class="detail-label">School:</span>
+            <span id="user-school"></span>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <script src="main.js"></script>
+  </body>
+</html>
